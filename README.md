@@ -1,6 +1,6 @@
 # Rancher Terraform
 
-This terraform is to spin up a single node Rancher VM on Linode with a Let's Encrypt certificate and configures a Linode Domain Record as well.
+This terraform is to spin up a single node Rancher VM on Linode with docker. The rke directoryt contains a basic cluster.yml that needs to be edited and run with `rke up` to setup a K8 cluster using RKE.
 
 ## Requirements
 - terraform 0.13 or newer
