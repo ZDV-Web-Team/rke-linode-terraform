@@ -1,0 +1,12 @@
+nodes:
+- address: 170.187.145.126
+  port: "22"
+  internal_address: 192.168.234.233
+  role:
+  - controlplane
+  - worker
+  - etcd
+  hostname_override: rancher.kzdv.io
+  user: daniel
+  docker_socket: /var/run/docker.sock
+  ssh_key_path: ~/.ssh/id_ecdsa

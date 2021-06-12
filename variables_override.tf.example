@@ -1,0 +1,54 @@
+# Name of the instance
+variable "instance_name" {
+    default = "rancher"
+}
+
+# Type of VM
+# https://api.linode.com/v4/linode/types
+variable "instance_type" {
+    default = "g6-standard-2"
+}
+
+# Image to use
+# https://api.linode.com/v4/images
+variable "instance_image" {
+    default = "linode/ubuntu18.04"
+}
+
+# Instance Region
+# https://api.linode.com/v4/regions
+variable "instance_region" {
+    default = "us-west"
+}
+
+# Use testing apt repos
+variable "instance_testing" {
+    default = true
+}
+
+# If true, will allow password auth and root logins in ssh
+# root password is set through terraform.tfvars
+variable "debugging" {
+    default = false
+}
+
+variable "rootdomain" {
+    default = "kzdv.io"
+}
+
+# ID in Cloudflare for rootdomain
+variable "rootdomain_id" {
+    default = "e57af5cf5a00b2cf700957ecde4f6933"
+}
+
+# Users
+variable "ssh_users" {
+    default = [
+        {
+            username = "daniel"
+            shell = "/bin/bash" 
+            sudo = true
+            github_username = "dhawton"
+        }
+    ]
+}
